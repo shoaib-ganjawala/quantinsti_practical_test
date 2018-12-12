@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <script type="text/javascript" src="node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script>
+    var socket = io("http://localhost:80");
+    socket.on('fileChanged', function(msg){
+        alert(msg);
+        document.getElementById("ma").innerHTML="JavaScript";
+    });
+    </script>
+    <div id="ma">hello shoaib!
+
+how are you?
+
+i am good!
+
+hello!
+
+rrrr
+</div>
+</body>
+</html>

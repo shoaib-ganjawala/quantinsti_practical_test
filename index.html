@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <script type="text/javascript" src="node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script>
+    var socket = io("http://localhost:80");
+    socket.on('fileChanged', function(msg){
+        alert(msg);
+    });
+    </script>
+    <p>shoaib - {{name}}</p>
+</body>
+</html>
